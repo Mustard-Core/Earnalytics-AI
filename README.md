@@ -1,2 +1,4 @@
-AI Solution
-The Ai solution its a salary prediction Ai that helps predicts a person salary based on  years of experience , age , gender , education and job title .It allows the municipality / companies to detect inequity and to ensure fair employment practice , it also help build trust amongst citizens .The Ai solution is relevant to the theme because it promote transparency  and fairness.
+
+AI SOLUTION 
+Earnlytics is a salary prediction AI designed to support financial planning and equitable compensation. It estimates salaries using age, gender, years of experience, and education. For managing company budgets, this AI enables accurate payroll forecasting while advancing fairness and transparency. This not only guards against underpayment but also improves financial stability and strengthens trust between management and staff.
+
