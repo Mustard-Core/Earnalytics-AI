@@ -1,10 +1,13 @@
 from preparation import *
 from settings import *
+from sklearn import svm
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import precision_score, recall_score, f1_score
 
 #Mapping features and target
 X = df[["Age","Gender","Education Level","Job Title","Years of Experience"]]
-X = X.to_numpy()
 
+X = X.to_numpy()
 y = df['Salary']
 
 #Train test split
@@ -22,21 +25,27 @@ predictions = model.predict(X_test)
 #Model Evaluation
 #Accuracy
 score = accuracy_score(y_test, predictions)
-print(" Accuracy Score ", score* 100)
+print("Score ", score* 100)
+
 
 #precision
 precision = precision_score(y_test, predictions, average='weighted', zero_division=0)
-print("Precision Score:", precision * 100)
+print("Precision:", precision * 100)
 
 # Recall
 recall = recall_score(y_test, predictions, average='weighted', zero_division=0)
-print("Recall Score:", recall*100)
+print("Recall:", recall*100)
 
 #F1-Score
 f1 = f1_score(y_test, predictions, average='weighted', zero_division=0)
-print("F1 Score:", f1*100)
+print("F1-score:", f1*100)
 
 
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
 
 
 

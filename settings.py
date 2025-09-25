@@ -14,6 +14,9 @@ from sklearn.metrics import classification_report, roc_auc_score, confusion_matr
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.utils import Bunch
+from sklearn import svm
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import precision_score, recall_score, f1_score
 
 
 
