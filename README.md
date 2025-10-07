@@ -9,7 +9,7 @@
 <h1 align="center">
   <br>
 
-  <img src="https://private-user-images.githubusercontent.com/223308285/498290297-faa7d49e-e992-4fbd-af58-7e397f843b9d.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTk4NDAxMDQsIm5iZiI6MTc1OTgzOTgwNCwicGF0aCI6Ii8yMjMzMDgyODUvNDk4MjkwMjk3LWZhYTdkNDllLWU5OTItNGZiZC1hZjU4LTdlMzk3Zjg0M2I5ZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMDA3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTAwN1QxMjIzMjRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01OThhOWM5MjQ1ZTFmZDk5ZWZjOGU3N2NmMzBmYzAyZjkxZDVhYTUyNjZmNGYzOGExOTMwMWE2YmIxZTUxOGJjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.Y6LNxn5WaHu8jbBIeuAmTDk_Wz8x0bvUAeP8kT6wK5E" alt="project-full-logo" border="0" />
+  <img src= "Media\project full logo.png" alt="project-full-logo" border="0" />
   <br>
   Trusted partner in compensation prediction
   <br>
