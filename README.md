@@ -1,11 +1,3 @@
-<style>
-
-#paragraph-1{text-align: center;
-  text-justify: inter-word;
-}
-</style>
-
-
 <h1 align="center">
   <br>
 
