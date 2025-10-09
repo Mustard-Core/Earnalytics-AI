@@ -21,7 +21,6 @@
 <a href="#main-objectives">Theme and relevance</a> •
   <a href="#main-objectives">Main objectives</a> •
   <a href="#credits">Data and tools</a> •
-  <a href="#credits">Tools</a> •
   <a href="#credits">Techiques</a>
    
 </p>
@@ -81,11 +80,19 @@ Output : Continious (Numercal Values)
  * Scikit-Learn
  * Pandas
  * Numpy
+ * AI programs
+ * Word
+ * Github
+ * Git
+ * Powerpoint
+ * Canva
+ * Youtube
+ * Photoshop
 
  ## Techniques
  * Data Cleaning
- 
-
+ * Removing missing values and their instances
+ * One hot encoding
 
 ## Model Evaluation
  * Accuracy Score
