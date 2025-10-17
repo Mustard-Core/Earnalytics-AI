@@ -1,18 +1,49 @@
-from nltk.tokenize import sent_tokenize, WordPunctTokenizer
-from nltk.stem.porter import PorterStemmer
-from nltk.stem.lancaster import LancasterStemmer
-from nltk.stem.snowball import SnowballStemmer
-from sklearn.feature_extraction.text import CountVectorizer
-from nltk.stem import WordNetLemmatizer
+from nltk import sent_tokenize, word_tokenize
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import OneHotEncoder, LabelEncoder
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score
+from settings import *
+
+encoder = preprocessing.LabelEncoder()
+le = LabelEncoder()
+
+# Load dataset
+df = pd.read_csv(r"Salary_Data.csv")
+df = df.dropna()
+
+#Changing Gender to numeric values
+encoder.fit(['Female','Male','Other'])
+df['Gender'] = encoder.fit_transform(df['Gender'])
+
+encoder.fit(["Bachelor's","Master's", "PhD","Bachelor's Degree","Master's Degree","High School"])
+df["Education Level"] = encoder.fit_transform(df["Education Level"])
 
 
-Sentences=['We are using the Bag of Word model', 'Bag of Word model isused for extracting the features.']
+arr_job_title = df['Job Title']
+arr_job_title = arr_job_title.to_numpy()
+
+new_list =[]
+
+job_titles = ""
+
+for i in range(len(arr_job_title)):
+    if(arr_job_title[i] not in new_list):
+        job_titles += arr_job_title[i] + " , "
+        
+new_list = sorted(sent_tokenize(job_titles))
+
+print(new_list)
+
+#label encoding
+encoder.fit(new_list)
+df['Job Title'] = encoder.fit_transform(df['Job Title'])
 
 
-vectorizer = CountVectorizer()
-features_text = vectorizer.fit_transform(Sentences)
-print(vectorizer.vocabulary_)
 
+
+        
 
 
 

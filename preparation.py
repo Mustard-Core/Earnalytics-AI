@@ -1,4 +1,5 @@
 import pandas as pd
+from nltk import sent_tokenize, word_tokenize
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder, LabelEncoder
 from sklearn.tree import DecisionTreeClassifier
@@ -20,6 +21,22 @@ encoder.fit(["Bachelor's","Master's", "PhD","Bachelor's Degree","Master's Degree
 df["Education Level"] = encoder.fit_transform(df["Education Level"])
 
 #label encoding
+arr_job_title = df['Job Title']
+arr_job_title = arr_job_title.to_numpy()
+
+jobs =[]
+job_titles = ""
+
+for i in range(len(arr_job_title)):
+    if(arr_job_title[i] not in jobs):
+        job_titles += arr_job_title[i] + " , "
+
+jobs = sorted(sent_tokenize(job_titles))
+print(jobs)
+
+
+
+
 encoder.fit(['Account Manager','Accountant','Administrative Assistant','Business Analyst',
               'Business Development Manager','Business Intelligence Analyst','CEO','Chief Data Officer',
               'Chief Technology Officer','Content Marketing Manager','Copywriter','Creative Director',
