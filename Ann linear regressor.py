@@ -3,31 +3,19 @@ import pandas
 from keras.models import Sequential
 from keras.layers import Dense
 from scikeras.wrappers import KerasRegressor
-from sklearn.model_selection import cross_val_score, KFold
+from sklearn.model_selection import cross_val_score, KFold, StratifiedKFold
+from sklearn.neural_network import MLPClassifier
 import settings
 
 
 dataframe = pandas.read_csv("housing.csv")
 dataset = dataframe.values
 
-X = dataset[:,0:13]
-Y = dataset[:,13]
-
-def baseline_model():
-    model_regressor = Sequential()
-    model_regressor.add(Dense(13, input_dim=13, kernel_initializer='normal',activation='relu'))
-    model_regressor.add(Dense(1, kernel_initializer='normal'))
-    model_regressor.compile(loss='mean_squared_error', optimizer='adam')
-    return model_regressor
-
-
-seed = 7
-numpy.random.seed(seed)
-
-estimator = KerasRegressor(build_fn=baseline_model, epochs=100, batch_size=5,verbose=0)
-kfold = KFold(n_splits=10)
-baseline_result = cross_val_score(estimator,X,Y,cv=kfold)
-
-print("Baseline: %.2f (%.2f) MSE" %
-(baseline_result.mean(),baseline_result.std()))
-
+X = dataset[:,0:8]
+Y = dataset[:,8]
+# create model
+model = MLPClassifier(hidden_layer_sizes=(12,8), activation='relu', max_iter=150, batch_size=10, verbose=False)
+# evaluate using 10-fold cross validation
+kfold = StratifiedKFold(n_splits=10, shuffle=True, random_state=42)
+results = cross_val_score(model, X, Y, cv=kfold)
+print(results.mean())

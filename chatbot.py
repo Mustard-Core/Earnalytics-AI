@@ -1,34 +1,48 @@
-from openai import OpenAI
 from google import genai
 from dotenv import load_dotenv
 import os
-
+import pandas
+import numpy
+import settings
 
 load_dotenv()
-client = OpenAI(api_key=os.getenv("GENAI_API_KEY"))
+client = genai.Client(api_key=os.getenv("GENAI_API_KEY"))
+instructions  = open("instructions.txt")
+instructions = instructions.read()
 
-print(client)
+pd = pandas.read_csv('salary_data.csv')
+pd = pd.to_numpy()
+pd = str(pd)
+
+response = client.models.generate_content(
+            model= "gemini-2.0-flash",
+            contents = instructions
+            )
+
+def run_chatbot():
+        while True:
+                user_input = input("You: ")
+                if user_input.lower() in ["quit", "exit", "sbye"]:
+                    break
+
+                response = client.models.generate_content(
+                    model= "gemini-2.0-flash",
+                    contents = user_input + instructions
+                    )
+                
+                print("Chatbot: ", response.text)
 
 
-def chat_with_gpt(prompt):
-    response = client.chat.completions.create(
-        model = "gpt-3.5-turbo",
-        messages=[
-            {"role": "system", "content": "You are a helpful assistant."},
-            {"role": "user", "content": prompt}
-        ]
-        )
-    
-    return response.choices[0].message.content.strip()
+def chat(user_input):
+        while True:
+                user_input = user_input
+                if user_input.lower() in ["quit", "exit", "sbye"]:
+                    break
 
-if __name__ == "__main__":
-    while True:
-        user_input = input("You: ")
-        if user_input.lower() in ["quit", "exit", "sbye"]:
-            break
-
-        response = chat_with_gpt(user_input)
-        print("Chatbot: " , response)
-
-
-                      
+                response = client.models.generate_content(
+                    model= "gemini-2.0-flash",
+                    contents = user_input + instructions
+                    )
+                
+                print("Chatbot: ", response.text)
+                return response.text

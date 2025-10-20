@@ -43,8 +43,6 @@ main_container.pack(fill="both", expand=True, padx=40, pady=(20, 0))
 input_frame = ctk.CTkFrame(main_container, fg_color="#0F3460", corner_radius=15)
 input_frame.pack(side="left", fill="y", expand=True, padx=20, pady=20)
 
-
-
 ctk.CTkLabel(input_frame, text="Employee Information", font=("Arial Bold", 22)).pack(pady=15)
 
 entries = {}
@@ -113,48 +111,6 @@ output_textbox = ctk.CTkTextbox(
 output_textbox.pack(fill="both", expand=True, padx=20, pady=20)
 output_textbox.insert("end", "Predicted salary will appear here...\n")
 
-# ------------------------------
-#  CHATBOT SECTION
-# ------------------------------
-chat_frame = ctk.CTkFrame(app, fg_color="#1A1A2E", corner_radius=0)
-chat_frame.pack(fill="x", side="bottom")
-
-ctk.CTkLabel(
-    chat_frame,
-    text="🤖 Chat with Earnlytics Assistant",
-    font=("Arial Bold", 18),
-    text_color="white"
-).pack(anchor="w", padx=20, pady=(10, 0))
-
-chat_display = ctk.CTkTextbox(chat_frame, height=140, font=("Consolas", 13))
-chat_display.pack(fill="x", padx=20, pady=10)
-
-# Auto greeting
-chat_display.insert("end", "Earnlytics :Hello! I’m here to help you navigate the AI Salary Predictor.\n")
-chat_display.insert("end", "Feel free to ask me questions about the system or salary insights.\n\n")
-
-chat_entry = ctk.CTkEntry(chat_frame, placeholder_text="Type your message here...")
-
-
-chat_entry.pack(side="left", fill="x", expand=True, padx=(20, 10), pady=(0, 20))
-
-send_button = ctk.CTkButton(
-    chat_frame,
-    text="Send",
-    width=100,
-    height=35,
-    fg_color="#533483",
-    hover_color="#6D44A0",
-    font=("Arial Rounded MT Bold", 14)
-)
-
-
-send_button.pack(side="right", padx=(0, 20), pady=(0, 20))
-
-
-
-
-        
 # ------------------------------
 #  RUN APP
 # ------------------------------

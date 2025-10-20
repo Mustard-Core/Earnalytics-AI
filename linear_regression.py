@@ -1,13 +1,16 @@
 from preparation import *
 from settings import *
+import numpy
 from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import RandomizedSearchCV, GridSearchCV
 from sklearn.ensemble import RandomForestRegressor
+from sklearn.linear_model import Ridge
 from sklearn.metrics import mean_absolute_error,median_absolute_error, mean_squared_error, r2_score,explained_variance_score
-
+import myJoblib as jl
 #Mapping features and target
 X = df[["Age","Gender","Education Level","Job Title","Years of Experience"]]
-
 X = X.to_numpy()
+
 y = df['Salary']
 
 #Train test split
@@ -32,5 +35,6 @@ print("Explain variance score =", round(explained_variance_score(y_test,y_test_p
 print("R2 score =", round(r2_score(y_test, y_test_pred), 2))
 
 
+# = = = = = = = = = =
 
-
+jl.joblib_create_model(model,"model")
