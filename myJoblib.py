@@ -1,15 +1,11 @@
 import joblib
-import linear_regression as lr
 
-def joblib_create_model(model, model_name):
-    joblib.dump(model, model_name)
+# Function to save a model
+def save_model(model, model_name):
+    joblib.dump(model, f"{model_name}.pkl")
+    print(f"Model saved successfully as {model_name}.pkl")
 
-def joblib_create_model(model_name):
-    return joblib.load(model_name)
+# Function to load a model
+def load_model(model_name):
+    return joblib.load(f"{model_name}.pkl")
 
-
-
-
-
-y_pred = lr.model.predict(lr.X_test)
-print(y_pred)
