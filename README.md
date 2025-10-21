@@ -17,7 +17,7 @@
 
 <div>
 
-  <img src= "Media\gui_tutorial.gif" alt="project-full-logo" border="0" />
+  <img src= "Media\tutorial.gif" alt="project-full-logo" border="0" />
 </div>
 
 
