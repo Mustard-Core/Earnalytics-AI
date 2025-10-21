@@ -7,7 +7,6 @@
   <br>
 </h1>
 <div align = "center" >
-<img src= "Media\gui_tutorial.gif" alt="project-full-logo" border="0" />
 
 
 
