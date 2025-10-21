@@ -15,7 +15,7 @@
 
 </div>
 
-<div>
+<div align="center">
 
   <img src= "Media\tutorial.gif" alt="project-full-logo" border="0" />
 </div>
