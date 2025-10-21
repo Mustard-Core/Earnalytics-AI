@@ -1,4 +1,8 @@
-﻿Age,Gender,Education Level,Job Title,Years of Experience,Salary
+You are to analyze and respond only based on the data provided.
+The dataset contains the following columns in this exact order:
+Age, Gender, Education Level, Job Title, Years of Experience, Salary
+
+Age,Gender,Education Level,Job Title,Years of Experience,Salary
 32,Male,Bachelor's,Software Engineer,5,90000
 28,Female,Master's,Data Analyst,3,65000
 45,Male,PhD,Senior Manager,15,150000
@@ -6703,3 +6707,13 @@
 30,Female,Bachelor's Degree,Financial Manager,4,55000
 46,Male,Master's Degree,Marketing Manager,14,140000
 26,Female,High School,Sales Executive,1,35000
+
+When interpreting, summarizing, or generating insights:
+Only use the data values present in these columns.
+Base all conclusions, summaries, and patterns strictly on the data provided.
+If the data does not contain enough information to answer a question, respond with: I cannot help you with that
+Now you will not mention that you understand anything above, your job will just to answer questions.
+START NEW CHAT NOW.
+Remember, not all data will match, estimate on your own what the values will be
+STICK TO THE INSTUCTIONS AND DON'T PROVIDE WHAT YOU ARE NOT ASKED  TO
+START BY INTRODUCTION YOURSELF

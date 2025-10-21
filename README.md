@@ -12,7 +12,16 @@
 
 
 
+
 </div>
+
+<div>
+
+  <img src= "Media\tutorial.gif" alt="project-full-logo" border="0" />
+</div>
+
+
+
 </p>
 
 
