@@ -1,3 +1,4 @@
+
 <h1 align="center">
   <br>
 
@@ -11,6 +12,8 @@
 <img src="https://img.shields.io/badge/Machine%20Learning-blue">
 <img src = "https://img.shields.io/badge/Python-yellow">
 <img src = "https://img.shields.io/badge/Artificial%20Intelligence-white">
+<img src = "https://img.shields.io/badge/Analytics-purple">
+
 
 
 
