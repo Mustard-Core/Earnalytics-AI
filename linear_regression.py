@@ -1,12 +1,13 @@
 from preparation import *
-from settings import *
+import settings
 import numpy
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import RandomizedSearchCV, GridSearchCV
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import Ridge
 from sklearn.metrics import mean_absolute_error,median_absolute_error, mean_squared_error, r2_score,explained_variance_score
-import myJoblib as jl
+import joblib
+
 #Mapping features and target
 X = df[["Age","Gender","Education Level","Job Title","Years of Experience"]]
 X = X.to_numpy()
@@ -34,7 +35,11 @@ print("Median absolute error =", round(median_absolute_error(y_test,y_test_pred)
 print("Explain variance score =", round(explained_variance_score(y_test,y_test_pred), 2))
 print("R2 score =", round(r2_score(y_test, y_test_pred), 2))
 
-
 # = = = = = = = = = =
+joblib.dump(model, "model") #Create model file
+mj = joblib.load('model') #Load model file
 
-jl.joblib_create_model(model,"model")
+def predict(values):
+        values = settings.convert(values)
+        values = values[0:-1]
+        return mj.predict([values])

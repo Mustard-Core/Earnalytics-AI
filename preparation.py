@@ -14,18 +14,16 @@ df = pd.read_csv(r"Salary_Data.csv")
 df = df.dropna()
 
 #Changing Gender to numeric values
-encoder.fit(['Female','Male','Other'])
-df['Gender'] = encoder.fit_transform(df['Gender'])
+le.fit(df['Gender'])
+df['Gender'] = le.fit_transform(df['Gender'])
 
 encoder.fit(["Bachelor's","Master's", "PhD","Bachelor's Degree","Master's Degree","High School"])
 df["Education Level"] = encoder.fit_transform(df["Education Level"])
-
 
 arr_job_title = df['Job Title']
 arr_job_title = arr_job_title.to_numpy()
 
 new_list =[]
-
 job_titles = ""
 
 for i in range(len(arr_job_title)):
