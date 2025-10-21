@@ -7,6 +7,13 @@
   <br>
 </h1>
 <div align = "center" >
+<img src= "Media\gui_tutorial.gif" alt="project-full-logo" border="0" />
+
+
+
+
+</div>
+<div align = "center" >
 <img src="https://img.shields.io/badge/Version-1.0.0-orange">
 
 
