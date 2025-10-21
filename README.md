@@ -8,6 +8,7 @@
 </h1>
 <div align = "center" >
 <img src="https://img.shields.io/badge/Version-1.0.0-orange">
+<img src="https://img.shields.io/badge/Machine Learning">
 
 
 
