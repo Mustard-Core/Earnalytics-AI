@@ -111,11 +111,49 @@ Output : Continious (Numercal Values)
  * Explain Variance Score
  * R2 Score
 
+# How it works
+
+This project predicts an individual's **salary** based on their **Age**, **Gender**, **Education Level**, **Years of Experience**, and **Job Title**.  
+It uses a trained machine learning model and a user-friendly interface built with **Python** and **CustomTkinter**.
+
+---
+
+## 🚀 Features
+
+* Simple and intuitive user interface  
+* Real-time predictions using a trained ML model  
+* Encodes text inputs automatically (Gender, Education Level, Job Title, etc.)  
+* No need to install  
+* Clean and customizable UI built with `customtkinter`
+
+---
+
+## Input Fields
+
+| Field | Description | Example |
+|-------|--------------|----------|
+| **Age** | Your age (numeric value) | `35` |
+| **Gender** | Your gender | `Male`, `Female`, `Other` |
+| **Education Level** | Highest level of education | `Bachelor's`, `Master's`, `PhD`, `Diploma` |
+| **Years of Experience** | Work experience in years | `5`, `10` |
+| **Job Title** | Current or desired job position | `Software Engineer`, `Data Analyst` |
 
 
 
 
 
+## ⚙️ Installation
 
+# Install required dependencies
+```bash
+pip install pandas numpy scikit-learn joblib customtkinter nltk
+```
+
+
+### 1️⃣ Clone the Repository and run it
+```bash
+git https://github.com/Mustard-Core/Earnalytics-AI.git
+cd Earnalytics-AI
+py GUI.py
 
 
